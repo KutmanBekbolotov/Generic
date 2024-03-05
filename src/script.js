@@ -21,3 +21,12 @@ function toggleLinks() {
         linksContainer.style.display = "none";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const mapButton = document.getElementById("mapButton");
+    mapButton.addEventListener("click", function() {
+        // Открываем карту в новой вкладке браузера
+        window.open("https://google.com/map", "_blank");
+    });
+});
+

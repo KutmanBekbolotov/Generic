@@ -117,6 +117,23 @@ footer {
     background-color: #f0f0f0; 
 }
 
+.container {
+    background-color: #f0f0f0; /* Цвет фона */
+    border-radius: 15px; /* Радиус закругления углов */
+    padding: 20px; /* Отступы внутри контейнера */
+    margin-bottom: 20px; /* Отступ между контейнерами */
+}
+
+.container img {
+    width: 100%; /* Изображение будет занимать всю доступную ширину контейнера */
+    border-radius: 10px; /* Дополнительное закругление углов изображения */
+}
+
+.container p {
+    margin-top: 10px; /* Отступ сверху для описания */
+}
+
+
 .see-all-button {
     background-color: #007bff; 
     color: #fff; 
@@ -132,6 +149,32 @@ footer {
     display: flex;
     align-items: center; 
 }
+
+.restaurants-container {
+    display: none;
+    max-height: 200px; /* Максимальная высота контейнера для прокрутки */
+    overflow-y: auto; /* Включаем вертикальную прокрутку при необходимости */
+}
+
+/* Стили для ресторанов */
+.restaurant {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.closeRestaurantsButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000; /* Цвет кнопки */
+    color: #fff; /* Цвет текста */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: block;
+}
+
 
 
 @media screen and (max-width: 768px) {
