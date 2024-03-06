@@ -71,7 +71,28 @@ function getRestaurantsByCuisine(cuisine) {
 
     return restaurantsByCuisine[cuisine] || [];
 }
+function showRestaurants(cuisine) {
+    const restaurantsContainer = document.getElementById("restaurantsContainer");
+    restaurantsContainer.innerHTML = "";
+
+    const closeBtn = document.createElement("button");
+    closeBtn.textContent = "Закрыть";
+    closeBtn.addEventListener("click", hideRestaurants);
+    restaurantsContainer.appendChild(closeBtn);
+
+    const restaurants = getRestaurantsByCuisine(cuisine);
+
+    restaurants.forEach(restaurant => {
+        const restaurantElement = document.createElement("div");
+        restaurantElement.classList.add("restaurant");
+        restaurantElement.innerHTML = `<h3>${restaurant.name}</h3><p>${restaurant.description}</p>`;
+        restaurantsContainer.appendChild(restaurantElement);
+    });
+
+    restaurantsContainer.style.display = "block";
+}
 function hideRestaurants() {
     const restaurantsContainer = document.getElementById("restaurantsContainer");
     restaurantsContainer.style.display = "none";
 }
+
