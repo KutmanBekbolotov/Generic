@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Название сайта</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="script.js"></script>
     <script src="kitchen.js"></script>
     <script src="images"></script>
@@ -81,10 +83,16 @@
                 <img src="images/icon4.png" alt="Иконка 4" width="20" height="21">
                 <span>Новости</span>
             </button>
-            <button id="mapButton">
+
+            <button id="openMapButton">
                 <img src="images/icon5.png" alt="Иконка Карты" width="20" height="21">
                 <span>Карта</span>
             </button>
+        </div>
+    
+        <div id="mapOverlay">
+            <div id="closeMapButton">Закрыть</div>
+            <div id="mapContainer"></div>
         </div>
     </footer>
     

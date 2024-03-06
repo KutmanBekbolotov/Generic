@@ -23,9 +23,21 @@ function toggleLinks() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const mapButton = document.getElementById("mapButton");
-    mapButton.addEventListener("click", function() {
-        window.open("https://google.com/map", "_blank");
+    const openMapButton = document.getElementById("openMapButton");
+    const mapOverlay = document.getElementById("mapOverlay");
+    const closeMapButton = document.getElementById("closeMapButton");
+
+    openMapButton.addEventListener("click", function() {
+        mapOverlay.style.display = "block"; 
+
+        const mapContainer = document.getElementById("mapContainer");
+        const map = L.map(mapContainer).setView([42.8746, 74.5698], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    });
+
+    closeMapButton.addEventListener("click", function() {
+        mapOverlay.style.display = "none"; 
     });
 });
 
+  
