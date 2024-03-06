@@ -1,0 +1,3 @@
+[build]
+  command = "npm run build" # команда для сборки проекта (если нужна)
+  publish = "Generic/src/index.html" # путь к index.html файлу
