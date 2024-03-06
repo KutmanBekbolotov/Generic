@@ -1,0 +1,185 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #92BCA0;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 32px; 
+}
+.recomend h1 {
+    font-size: 18px; 
+}
+
+
+.search-bar {
+    flex-grow: 1;
+    margin-left: 20px;
+    position: relative; 
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 22px;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    color: #fff;
+}
+
+
+footer {
+    background-color: #d2d2d2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links {
+    list-style-type: none;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button-container button img {
+    margin-bottom: 5px; 
+}
+
+.button-container button span {
+    font-size: 12px;
+    color: white 
+}
+
+#linksContainer {
+    display: none; 
+}
+
+#linksContainer a {
+    text-decoration: none; 
+    color: black; 
+    display: block; 
+    padding: 10px; 
+    text-align: left; 
+}
+
+#linksContainer a:hover {
+    background-color: #f0f0f0; 
+}
+
+.container {
+    background-color: #f0f0f0; /* Цвет фона */
+    border-radius: 15px; /* Радиус закругления углов */
+    padding: 20px; /* Отступы внутри контейнера */
+    margin-bottom: 20px; /* Отступ между контейнерами */
+}
+
+.container img {
+    width: 100%; /* Изображение будет занимать всю доступную ширину контейнера */
+    border-radius: 10px; /* Дополнительное закругление углов изображения */
+}
+
+.container p {
+    margin-top: 10px; /* Отступ сверху для описания */
+}
+
+
+.see-all-button {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 22px; 
+    cursor: pointer; 
+    margin-top: -25px; 
+    margin-left: 240px;
+}
+
+.recomend {
+    display: flex;
+    align-items: center; 
+}
+
+.restaurants-container {
+    display: none;
+    max-height: 200px; /* Максимальная высота контейнера для прокрутки */
+    overflow-y: auto; /* Включаем вертикальную прокрутку при необходимости */
+}
+
+/* Стили для ресторанов */
+.restaurant {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.closeRestaurantsButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000; /* Цвет кнопки */
+    color: #fff; /* Цвет текста */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: block;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 22px; 
+        text-align: center; 
+    }
+}
