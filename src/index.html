@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название сайта</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="kitchen.js"></script>
+    <script src="images"></script>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <h1>Главная</h1>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Поиск...">
+            <button class="search-icon" type="submit">&#128269;</button> 
+        </div>
+    </header>
+
+    <main>
+        <button id="showLinks" onclick="toggleLinks()">
+            <img src="images/listMenu.webp" alt="List Icon" width="20" height="21" > 
+        </button>
+        <div id="linksContainer" style="display: none;">
+            <a href="#" onclick="showRestaurants('Корейская кухня')">Корейская кухня</a>
+            <a href="#" onclick="showRestaurants('Fast food')">Fast food</a>
+            <a href="#" onclick="showRestaurants('Европейская кухня')">Европейская кухня</a>
+            <a href="#" onclick="showRestaurants('Грузинская кухня')">Грузинская кухня</a>
+            <a href="#" onclick="showRestaurants('Чайхана')">Чайхана</a>
+            <a href="#" onclick="showRestaurants('Кофейня')">Кофейня</a>
+            <a href="#" onclick="showRestaurants('Кафе')">Кафе</a>
+            <a href="#" onclick="showRestaurants('Шашлычная')">Шашлычная</a>
+            <a href="#" onclick="showRestaurants('Столовая')">Столовая</a>
+        </div>
+
+        <div id="restaurantsContainer" class="restaurants-container" style="display: none;">
+            <button id="closeRestaurantsButton" onclick="hideRestaurants()">Закрыть</button>
+        </div>
+
+        <div class="recomend">
+            <h1>Рекомендации</h1>
+        </div>
+
+        <div class="recomend">
+            <button class="see-all-button">Смотреть все</button>
+        </div>
+
+        <div class="container">
+            <img src="images/image 1.png" alt="Изображение">
+            <h3>Чайхана Navat</h3>
+            <p>Вкусная кухня</p>
+            <p>10:00-24:00</p>
+        </div>
+        <div class="container">
+            <img src="images/image 2.png" alt="Изображение">
+            <h3>Кофейня Бублик</h3>
+            <p>Вкусный кофе</p>
+            <p>09:00-22:00</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="button-container">
+            <button>
+                <img src="images/icon1.png" alt="Иконка 1" width="20" height="21">
+                <span>Главная</span>
+            </button>
+            <button>
+                <img src="images/icon2.png" alt="Иконка 2" width="20" height="21">
+                <span>Заведения</span>
+            </button>
+            <button>
+                <img src="images/icon3.png" alt="Иконка 3" width="20" height="21">
+                <span>Избранное</span>
+            </button>
+            <button>
+                <img src="images/icon4.png" alt="Иконка 4" width="20" height="21">
+                <span>Новости</span>
+            </button>
+            <button id="mapButton">
+                <img src="images/icon5.png" alt="Иконка Карты" width="20" height="21">
+                <span>Карта</span>
+            </button>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
