@@ -1,7 +1,7 @@
 .restaurant-header {
     display: flex;
     align-items: center;
-    background-color: #EFFFF3;
+    background-color: #92BCA0;
 }
 
 .back-button {
@@ -26,9 +26,24 @@
 }
 
 .rating span {
-    margin-right: 10px; /* Расстояние между элементами */
+    margin-right: 10px; 
 }
 
 .logo{
     margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+  
+    .restaurant-info {
+        padding: 10px;
+    }
+
+    .restaurant-info h2 {
+        font-size: 20px;
+    }
+
+    .restaurant-info p {
+        font-size: 14px;
+    }
 }

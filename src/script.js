@@ -118,9 +118,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function searchRestaurants(searchTerm) {
-        // Здесь вы можете выполнить поиск в вашем массиве заведений и перенаправить пользователя на страницу с информацией о найденном заведении
-        // Пример:
-        if (searchTerm === "navat" || searchTerm === "Navat") {
+       
+        if (searchTerm === "navat" || searchTerm === "Navat" || searchTerm === "Нават" || "нават") {
             window.location.href = "restaurant1.html";
         } else if (searchTerm === "кофейня бублик" || searchTerm === "бублик" || searchTerm === "Бубулик") {
             window.location.href = "restaurant2.html";
@@ -142,13 +141,13 @@ function redirectToPage(restaurantId) {
         window.location.href = "not_found.html";
     }
 }
-redirectToPage(restaurantId);
-
 document.addEventListener("DOMContentLoaded", function() {
     const backButton = document.querySelector(".back-button");
 
     backButton.addEventListener("click", function() {
-        window.location.href = "index.html"; 
+        window.history.back();
     });
 });
+
+
 
