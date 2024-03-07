@@ -49,28 +49,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     openMapButton.addEventListener("click", function() {
         mapOverlay.style.display = "block";
-        // Ваши действия для открытия карты
     });
 
     closeMapButton.addEventListener("click", function() {
         mapOverlay.style.display = "none";
-        // Ваши действия для закрытия карты
     });
 
-    // Добавляем обработчик для закрытия избранного
     closeFavoritesButton.addEventListener("click", function() {
         document.getElementById("favoritesOverlay").style.display = "none";
-        // Ваши действия для закрытия избранного
     });
 
-    // Добавляем обработчик для закрытия новостей
     closeNewsButton.addEventListener("click", function() {
         document.getElementById("newsOverlay").style.display = "none";
-        // Ваши действия для закрытия новостей
     });
 });
 
-// Функции toggleFavorites и toggleNews, если они вам нужны
 function toggleFavorites() {
     const favoritesOverlay = document.getElementById("favoritesOverlay");
     favoritesOverlay.style.display = favoritesOverlay.style.display === "block" ? "none" : "block";
@@ -80,3 +73,74 @@ function toggleNews() {
     const newsOverlay = document.getElementById("newsOverlay");
     newsOverlay.style.display = newsOverlay.style.display === "block" ? "none" : "block";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.getElementById("searchInput");
+
+    const restaurants = [
+        { id: 1, name: "Чайхана Navat", rating: 4.5, photo: "images/navat.jpg" },
+        { id: 2, name: "Кофейня Бублик", rating: 4.0, photo: "images/bublik.jpg" },
+        { id: 3, name: "Ресторан Корейской кухни", rating: 4.2, photo: "images/korean.jpg" }
+        // Добавьте сюда другие заведения
+    ];
+
+    searchInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            const searchText = searchInput.value.toLowerCase().trim();
+            const foundRestaurant = searchRestaurants(searchText);
+            if (foundRestaurant) {
+                window.location.href = `restaurant${foundRestaurant.id}.html`;
+            } else {
+                alert("Заведение не найдено");
+            }
+        }
+    });
+
+    function searchRestaurants(searchText) {
+        for (let i = 0; i < restaurants.length; i++) {
+            if (restaurants[i].name.toLowerCase().includes(searchText)) {
+                return restaurants[i];
+            }
+        }
+        return null;
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.querySelector(".search-bar input");
+    const searchButton = document.querySelector(".search-bar button");
+
+    searchButton.addEventListener("click", function() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        if (searchTerm !== "") {
+            searchRestaurants(searchTerm);
+        }
+    });
+
+    function searchRestaurants(searchTerm) {
+        // Здесь вы можете выполнить поиск в вашем массиве заведений и перенаправить пользователя на страницу с информацией о найденном заведении
+        // Пример:
+        if (searchTerm === "navat" || searchTerm === "Navat") {
+            window.location.href = "restaurant1.html";
+        } else if (searchTerm === "кофейня бублик" || searchTerm === "бублик" || searchTerm === "Бубулик") {
+            window.location.href = "restaurant2.html";
+        } else if (searchTerm === "ресторан корейской кухни 1" || searchTerm === "Корейская кухня" || searchTerm === "корейская кухня") {
+            window.location.href = "restaurant3.html";
+        } else {
+            alert("Заведение не найдено");
+        }
+    }
+});
+
+function redirectToPage(restaurantId) {
+    
+    if (restaurants[restaurantId]) {
+     
+        window.location.href = `restaurant_${restaurantId}.html`;
+    } else {
+       
+        window.location.href = "not_found.html";
+    }
+}
+redirectToPage(restaurantId);
+
