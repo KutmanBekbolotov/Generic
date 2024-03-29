@@ -1,7 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .restaurant-header {
     display: flex;
     align-items: center;
     background-color: #92BCA0;
+    padding: 20px;
 }
 
 .back-button {
@@ -18,32 +25,49 @@
 
 .restaurant-header h1 {
     margin: 0;
+    flex-grow: 1; /* Растягиваем заголовок, чтобы занимал все доступное пространство */
 }
 
 .rating {
-    margin-right: 350px; 
-    margin-top: 70px;
+    margin-right: 20px; /* Уменьшаем отступ для рейтинга */
 }
 
-.rating span {
-    margin-right: 10px; 
+.logo {
+    max-width: 100px; /* Устанавливаем максимальную ширину для логотипа */
+    height: auto;
 }
 
-.logo{
-    margin-left: auto;
+main {
+    max-width: 800px; /* Устанавливаем максимальную ширину контейнера с содержимым */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+    padding: 20px; /* Добавляем отступы вокруг контейнера */
+}
+
+img {
+    max-width: 100%; /* Сделаем изображения адаптивными */
+    height: auto;
+}
+
+.restaurant-info {
+    margin-top: 20px; /* Добавляем отступ над блоком информации о ресторане */
+}
+
+.restaurant-info p {
+    margin-bottom: 10px; /* Добавляем отступ между параграфами */
 }
 
 @media screen and (max-width: 600px) {
-  
-    .restaurant-info {
-        padding: 10px;
+    .restaurant-header {
+        flex-direction: column; /* Меняем направление расположения элементов на вертикальное */
+        align-items: flex-start; /* Выравниваем элементы слева */
+        text-align: center; /* Выравниваем текст по центру */
     }
 
-    .restaurant-info h2 {
-        font-size: 20px;
+    .rating {
+        margin: 10px 0; /* Уменьшаем отступы для рейтинга */
     }
 
-    .restaurant-info p {
-        font-size: 14px;
+    .logo {
+        margin: 10px auto; /* Центрируем логотип */
     }
 }
