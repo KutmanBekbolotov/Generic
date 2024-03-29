@@ -175,6 +175,14 @@ footer {
   #closeButton:hover {
     background-color: #cccccc;
   }
+.container a {
+    color: black;
+    text-decoration: none;
+}
+
+.container a:hover {
+    background-color: transparent;
+}
 
 #mapOverlay {
     display: none;
