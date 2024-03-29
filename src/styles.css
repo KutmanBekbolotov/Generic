@@ -105,8 +105,8 @@ footer {
 }
 
 #linksContainer a {
+    color: black !important; 
     text-decoration: none; 
-    color: black; 
     display: block; 
     padding: 10px; 
     text-align: left; 
@@ -257,6 +257,7 @@ footer {
 #closeNewsButton:hover {
     background-color: #000000;
 }
+
 
 
 @media screen and (max-width: 768px) {

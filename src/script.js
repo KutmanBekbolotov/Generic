@@ -119,11 +119,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function searchRestaurants(searchTerm) {
        
-        if (searchTerm === "navat" || searchTerm === "Navat" || searchTerm === "Нават" || "нават") {
+        if (searchTerm === "navat" || searchTerm === "Navat" || searchTerm === "Нават" || searchTerm === "нават") {
             window.location.href = "restaurant1.html";
-        } else if (searchTerm === "кофейня бублик" || searchTerm === "бублик" || searchTerm === "Бубулик") {
+        } 
+        if (searchTerm === "кофейня бублик" || searchTerm === "бублик" || searchTerm === "Бубулик") {
             window.location.href = "restaurant2.html";
-        } else if (searchTerm === "ресторан корейской кухни 1" || searchTerm === "Корейская кухня" || searchTerm === "корейская кухня") {
+        }
+        if (searchTerm === "Savanna" || searchTerm === "savanna" || searchTerm === "саванна") {
             window.location.href = "restaurant3.html";
         } else {
             alert("Заведение не найдено");
