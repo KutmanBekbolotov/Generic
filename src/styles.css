@@ -231,6 +231,16 @@ footer {
     height: 80%; 
 }
 
+.news-container {
+    position: relative; 
+    padding-top: 50px; 
+}
+
+.news-container h2,
+.news-container img {
+    margin-top: 20px; 
+}
+
   #closeNewsButton {
     position: absolute;
     top: 10px;

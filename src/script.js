@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
     backButton.addEventListener("click", function() {
         window.history.back();
     });
-});
+})
 
 
 
